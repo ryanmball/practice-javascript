@@ -1,3 +1,5 @@
+/* eslint-disable semi */
+/* eslint-disable no-redeclare */
 // Exercise: (work in pairs)
 // Solve the following problems first in Ruby, then convert the solution to JavaScript.
 // 1. Write a function that takes in an array of numbers and returns its' sum.
@@ -23,7 +25,7 @@ let smallestString = strings => {
     }
   });
   return string;
-}
+};
 console.log(smallestString(strings));
 
 // 3. Write a function that takes in an array of numbers and returns a new array with the numbers in reverse order.
@@ -82,6 +84,7 @@ console.log(product(nums));
 // 7. Write a function that takes in an array of numbers and returns the two smallest numbers.
 var nums = [10, 15, 20, 30, 5, 8, 15];
 function twoSmallest(nums) {
+  // eslint-disable-next-line brace-style
   return nums.sort((a, b) => { return a - b }).slice(0, 2);
 }
 console.log(twoSmallest(nums));
@@ -104,7 +107,7 @@ console.log(numberZeros(nums));
 
 // 9. Write a function that takes in an array of numbers and returns true if all the numbers are bigger than 10, otherwise returns false.
 var nums = [11, 15, 20, 30, 15, 100, 5002, 5];
-var greater = true
+var greater = true;
 var greaterThan10 = nums => {
   for (var i = 0; i < nums.length; i++) {
     if (nums[i] <= 10) {
@@ -113,18 +116,18 @@ var greaterThan10 = nums => {
     }
   }
   return greater;
-}
+};
 console.log(greaterThan10(nums));
 
 // 10. Write a function that takes in an array of words and returns the number of times the letter “a” appeared in total.
 var words = ["shoe", "egg", "ant", "arm", "antarctica", "lamp"];
 var numOfA = words => {
   return words.join("").split("a").length - 1
-}
+};
 // OR
 var numOfA2 = words => {
-  return words.join("").match(/\a/g).length // need to get better understanding of Regex
-}
+  return words.join("").match(/a/g).length // need to get better understanding of Regex
+};
 
 console.log(numOfA(words));
 console.log(numOfA2(words));
@@ -145,7 +148,7 @@ var palindrome = string => {
   // }
   // else
   //   return palindrome(string.substr(1)) + string.charAt(0);
-}
+};
 console.log(palindrome("kayak")); //=>true
 
 // Write a function to generate/print/store the first "n" prime numbers.
