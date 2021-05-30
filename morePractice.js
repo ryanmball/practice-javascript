@@ -22,7 +22,7 @@ function smallestString(strings) {
       string = word;
     }
   });
-  return string
+  return string;
 }
 console.log(smallestString(strings));
 
@@ -34,7 +34,17 @@ function reverse(numbers) {
 console.log(reverse(nums));
 
 // 4. Write a function that takes in an array of words and returns the number of words that begin with the letter “a”.
-
+words = ["shoe", "egg", "ant", "arm", "antarctica", "lamp"]
+function aWords(words) {
+  var count = 0;
+  words.forEach(function(word) {
+    if (word[0] === "a") {
+      count++;
+    }
+  });
+  return count;
+}
+console.log(aWords(words));
 
 // 5. Write a function that takes in an array of strings and joins them together to make a single string separated by commas.
 
